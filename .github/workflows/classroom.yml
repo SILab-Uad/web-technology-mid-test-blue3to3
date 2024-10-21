@@ -27,7 +27,7 @@ jobs:
       - name: Run tests
         id: run-tests
         run: |
-          npm test --reporter mocha-junit-reporter > test-results.xml
+          npm test 
           echo "Test results saved to test-results.xml."
 
       - name: Install xmlstarlet
