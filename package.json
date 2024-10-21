@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register --reporter mocha-junit-reporter test//*.js"
+    "pretest": "node script.js",
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,7 @@
     "@babel/register": "^7.14.5",
     "chai": "^4.3.4",
     "jsdom": "^16.4.0",
-    "mocha": "^9.0.0",
+    "mocha": "^9.2.2",
     "mocha-junit-reporter": "^2.2.1"
   }
 }
