@@ -13,7 +13,10 @@ const generatePassword = (length, options) => {
     if (options.includeLowercase) charset += lowercase;
     if (options.includeNumbers) charset += numbers;
     if (options.includeSpecialChars) charset += specialChars;
-    if (charset === "") charset = lowercase;
+
+    if (charset === "") {
+        throw new Error("At least one character type must be selected.");
+    }
 
     // TODO: Generate the password based on the selected criteria
     let password = "";
@@ -23,6 +26,7 @@ const generatePassword = (length, options) => {
     return password;
 };
 
+module.exports = { generatePassword };
 // TODO: Add event listener to the button to call generatePassword and display the output
 
 // BONUS: Implement the copy to clipboard functionality
