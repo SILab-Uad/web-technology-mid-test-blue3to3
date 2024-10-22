@@ -26,7 +26,7 @@ const generatePassword = (length, options) => {
     return password;
 };
 
-module.exports = generatePassword;
+module.exports = { generatePassword };
 
 
 // TODO: Add event listener to the button to call generatePassword and display the output
